@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="More widgets"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shipping_opt"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <RadioButton
+            android:text="With Shipping"
+            android:id="@+id/shipping"
+            />
+        <RadioButton
+            android:text="Without Shipping"
+            android:id="@+id/without_shp"
+            />
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/payment_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select payment method"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/shipping_opt"
+        android:layout_marginHorizontal="10sp"
+        />
+
+
+    <Spinner
+        android:id="@+id/paymentmethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp"
+        android:layout_marginVertical="10sp"
+        app:layout_constraintTop_toBottomOf="@id/payment_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/btn_container"
+        android:layout_marginHorizontal="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/paymentmethod"
+        android:orientation="horizontal"
+
+        >
+
+        <Button
+            android:id="@+id/pick_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "pick date"
+            android:layout_weight="2"
+            android:layout_marginHorizontal="5sp"
+            />
+
+        <Button
+            android:id="@+id/pick_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pick time"
+            android:layout_weight="2"
+            android:layout_marginHorizontal="5sp"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/progress_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Processing progress"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_container"
+        android:layout_marginHorizontal="10sp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/progress_label"
+        android:layout_marginVertical="10sp"
+        android:layout_marginHorizontal="10sp"
+        android:scaleY="2"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10sp"
+        android:layout_marginVertical="10sp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/label_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selectr notification methods"
+            />
+        <CheckBox
+            android:id="@+id/sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send SMS"
+            />
+        <CheckBox
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send email"
+            />
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notify me when my package is cleared from port"
+        android:layout_marginVertical="10sp"
+        android:layout_marginHorizontal="10sp"
+        app:layout_constraintTop_toBottomOf="@id/layout_checkbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/add_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Provide any additional information concerning your package "
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/switch1"
+        android:layout_margin="10sp"
+        />
+    <EditText
+        android:id="@+id/add_info_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/add_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10sp"
+    />
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        app:layout_constraintTop_toBottomOf="@id/add_info_msg"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
