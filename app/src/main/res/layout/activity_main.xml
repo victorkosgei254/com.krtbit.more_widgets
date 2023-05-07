@@ -12,7 +12,6 @@
         android:layout_height="wrap_content"
         android:text="More widgets"
         android:gravity="center"
-        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
